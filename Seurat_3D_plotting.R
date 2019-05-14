@@ -20,6 +20,7 @@ tsne_1 <- yourseuratobject[["tsne"]]@cell.embeddings[,1]
 tsne_2 <- yourseuratobject[["tsne"]]@cell.embeddings[,2]
 tsne_3 <- yourseuratobject[["tsne"]]@cell.embeddings[,3]
 
+# If you are using Seurat v2.3.4 the following code is what you need to extract information for cell embeddings
 # tsne_2 <- yourseuratobject@reductions$tsne@cell.embeddings[,2]
 # tsne_3 <- yourseuratobject@reductions$tsne@cell.embeddings[,3]
 
