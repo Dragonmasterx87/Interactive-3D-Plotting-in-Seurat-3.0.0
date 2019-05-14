@@ -1,4 +1,5 @@
 # 3D tsne projection
+# R v3.5.3 (x64 bit) and RStudio v1.2.1335 (x64 bit) were used for running this code :)
 install.packages('scatterplot3d')
 install.packages('rgl')
 install.packages('rmarkdown')
