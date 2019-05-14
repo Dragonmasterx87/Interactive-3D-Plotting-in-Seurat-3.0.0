@@ -4,5 +4,6 @@ The following code is used to generate nice interactive 3D tSNE plots against Se
 
 For more on Seurat please visit:https://satijalab.org/seurat/
 
-Feel Free to message me if you run into issues and need help! Have a Great day!
+Feel Free to message me if you run into issues and need help!
 Please Star and fork if this is useful for your analysis!
+Have a Great day!
