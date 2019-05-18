@@ -1,14 +1,14 @@
 # 3D tSNE plotting of scRNAseq Data
 # The following is a length of code generated to create nice 
-# 3D tSNE plots  seurat v3.0.0 objects utilizing the visualization 
+# 3D tSNE plots of seurat v3.0.0 objects utilizing the visualization 
 # package plot_ly
 
 # R v3.5.3 (x64 bit) and RStudio v1.2.1335 (x64 bit) were used for running this code :)
 
-# Seurat is a single Cell RNA seq analysis algorithm created by
+# Seurat is a multimodal single Cell RNA seq analysis algorithm created by
 # The Satija Lab please see: https://satijalab.org/seurat/
 
-# Contributors:
+# Contributors (by their Github handles):
 # @Dragonmasterx87 (Dept. of Cell Biology, UM)
 # @msaadsadiq (Dept. of Electrical and Computer Engineering, UM)
 # @andrewwbutler (Center for Genomics and Systems Biology, NYU)  
