@@ -7,3 +7,7 @@ For more on Seurat please visit:https://satijalab.org/seurat/
 Feel Free to message me if you run into issues and need help!
 Please Star and fork if this is useful for your analysis!
 Have a Great day!!
+
+# Contact
+Fahd Qadir, Graduate Student. Molecular Cell and Dev. Biology Graduate Program,
+Dept. of Cell Biology, University of Miami, Miller School of Medicine.
