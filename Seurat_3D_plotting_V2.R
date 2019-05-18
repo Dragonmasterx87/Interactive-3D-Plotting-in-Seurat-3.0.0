@@ -6,7 +6,7 @@
 # R v3.5.3 (x64 bit) and RStudio v1.2.1335 (x64 bit) were used for running this code :)
 
 # Seurat is a multimodal single Cell RNA seq analysis algorithm created by
-# The Satija Lab please see: https://satijalab.org/seurat/
+# The Satija Lab. Fr more information please see: https://satijalab.org/seurat/
 
 # Contributors (by their Github handles):
 # @Dragonmasterx87 (Dept. of Cell Biology, UM)
