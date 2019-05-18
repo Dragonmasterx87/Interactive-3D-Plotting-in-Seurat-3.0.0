@@ -6,7 +6,7 @@
 # R v3.5.3 (x64 bit) and RStudio v1.2.1335 (x64 bit) were used for running this code :)
 
 # Seurat is a multimodal single Cell RNA seq analysis algorithm created by
-# The Satija Lab. Fr more information please see: https://satijalab.org/seurat/
+# The Satija Lab. For more information please see: https://satijalab.org/seurat/
 
 # Contributors (by their Github handles):
 # @Dragonmasterx87 (Dept. of Cell Biology, UM)
@@ -60,7 +60,7 @@ plot_ly(data = plotting.data,
 
 # Say you wanto make a gene-expression 3D plot, where you can plot gene expression against a color scale
 # Here using the same seurat object as above, we extract gene expression information for beta-actin 'ACTB'
-# creat a dataframe
+# create a dataframe
 plotting.data <- FetchData(object = yourseuratobject, vars = c("tSNE_1", "tSNE_2", "tSNE_3", "ACTB"))
 
 # Say you want change the scale, so that every cell having an expression >1 will be one color
@@ -77,7 +77,7 @@ plotting.data$label <- paste(rownames(plotting.data)," - ", plotting.data$ACTB, 
 # Plot your data, in this example my Seurat object had 21 clusters (0-20), and cells express a gene called ACTB
 plot_ly(data = plotting.data, 
         x = ~tSNE_1, y = ~tSNE_2, z = ~tSNE_3, 
-        color = ~changed,
+        color = ~changed, # you can just run this against the column for the gene as well using ~ACTB
         opacity = .5,
         colors = c('darkgreen', 'red'), 
         type = "scatter3d", 
