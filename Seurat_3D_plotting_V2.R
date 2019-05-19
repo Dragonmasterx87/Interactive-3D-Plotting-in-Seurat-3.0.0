@@ -1,4 +1,4 @@
-# 3D tSNE plotting of scRNAseq Data
+# Interacive multimodal 3D tSNE plotting of scRNA sequencing datasets
 # The following is a length of code generated to create nice 
 # 3D tSNE plots of seurat v3.0.0 objects utilizing the visualization 
 # package plot_ly
