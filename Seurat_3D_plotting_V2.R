@@ -71,7 +71,7 @@ plotting.data <- FetchData(object = yourseuratobject, vars = c("tSNE_1", "tSNE_2
 # This information is stored in the 'changed' column of your dataframe
 plotting.data$changed <- ifelse(test = plotting.data$KRT19 <1, yes = plotting.data$KRT19, no = 1)
 
-# Change the label column, so that now the column has 'cellname-its expression value'
+# Add the label column, so that now the column has 'cellname-its expression value'
 plotting.data$label <- paste(rownames(plotting.data)," - ", plotting.data$ACTB, sep="")
 
 # Plot your data, in this example my Seurat object had 21 clusters (0-20), and cells express a gene called ACTB
