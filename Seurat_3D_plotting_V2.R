@@ -19,7 +19,7 @@ install.packages('plotly')
 # Load plot_ly
 library(plotly)
 
-# Construct a datasframe using data from your pre-clustered Seurat v3.0.0 object
+# Construct a dataframe using data from your pre-clustered Seurat v3.0.0 object
 # Here 'seurat_clusters' is list of numeric cluster identities, you can find it here: yourseuratobject[["seurat_cluster"]], 
 # or yourseuratobject$seurat_clusters, where 'yourseuratobject' is a Seurat object created with Seurat v3.0.0
 yourseuratobject <- ThisIsWhateverYourSeuratObjectIs
