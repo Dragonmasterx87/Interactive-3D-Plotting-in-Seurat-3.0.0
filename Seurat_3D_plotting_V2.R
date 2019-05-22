@@ -22,6 +22,20 @@ library(plotly)
 # Construct a datasframe using data from your pre-clustered Seurat v3.0.0 object
 # Here 'seurat_clusters' is list of numeric cluster identities, you can find it here: yourseuratobject[["seurat_cluster"]], 
 # or yourseuratobject$seurat_clusters, where 'yourseuratobject' is a Seurat object created with Seurat v3.0.0
+yourseuratobject <- ThisIsWhateverYourSeuratObjectIs
+
+# Re-run tSNE s that you have accurate calculations for all tSNE(s)
+yourseuratobject <- RunTSNE(yourseuratobject,
+                        reduction.use = "pca",
+                        dims.use = 1:20,
+                        dim.embed = 3)
+
+# Extract tSNE information from Seurat Object
+tsne_1 <- yourseuratobject[["tsne"]]@cell.embeddings[,1]
+tsne_2 <- yourseuratobject[["tsne"]]@cell.embeddings[,2]
+tsne_3 <- yourseuratobject[["tsne"]]@cell.embeddings[,3]
+
+# Prepare a dataframe for cell plotting
 plot.data <- FetchData(object = yourseuratobject, vars = c("tSNE_1", "tSNE_2", "tSNE_3", "seurat_clusters"))
 
 # Make a column of row name identities (these will be your cell/barcode names)
