@@ -1,6 +1,6 @@
 # 3D-Plotting-in-Seurat-3.0.0
 
-The following code is used to generate nice interactive 3D tSNE plots against Seurat objects created using the excellent single cell RNAseq analysis tool created by the Satijalab. This code works for Seurat v3.0.0
+The following code is used to generate nice interactive 3D tSNE plots against Seurat objects created using the excellent single cell RNAseq analysis tool created by the Satijalab. V1 works for Seurat v2.3.4 and V2 of the code works for Seurat v3.0.0.
 
 For more on Seurat please visit:https://satijalab.org/seurat/
 
