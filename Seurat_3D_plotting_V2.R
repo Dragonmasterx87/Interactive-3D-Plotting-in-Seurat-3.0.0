@@ -83,7 +83,7 @@ plotting.data <- FetchData(object = yourseuratobject, vars = c("tSNE_1", "tSNE_2
 
 # First make another column in your dataframe, where all values above 1 are re-assigned a value of 1
 # This information is stored in the 'changed' column of your dataframe
-plotting.data$changed <- ifelse(test = plotting.data$KRT19 <1, yes = plotting.data$KRT19, no = 1)
+plotting.data$changed <- ifelse(test = plotting.data$ACTB <1, yes = plotting.data$ACTB, no = 1)
 
 # Add the label column, so that now the column has 'cellname-its expression value'
 plotting.data$label <- paste(rownames(plotting.data)," - ", plotting.data$ACTB, sep="")
@@ -91,7 +91,7 @@ plotting.data$label <- paste(rownames(plotting.data)," - ", plotting.data$ACTB, 
 # Plot your data, in this example my Seurat object had 21 clusters (0-20), and cells express a gene called ACTB
 plot_ly(data = plotting.data, 
         x = ~tSNE_1, y = ~tSNE_2, z = ~tSNE_3, 
-        color = ~changed, # you can just run this against the column for the gene as well using ~ACTB
+        color = ~changed, # you can just run this against the column for the gene as well using ~ACTB, the algorith will automatically scale in that case based on maximal and minimal values
         opacity = .5,
         colors = c('darkgreen', 'red'), 
         type = "scatter3d", 
@@ -100,6 +100,11 @@ plot_ly(data = plotting.data,
         text=~label,
         hoverinfo="text"
 )
+
+# On running this code the HTML output should appear in RStudio. You can save the output as a
+# HTML file. Once you have saved, just open the HTML file in any web browser (double click on the html- file
+# and if asked select to open with any web browser like google chrome/safari/mozilla/explorer etc).
+# It should be have all of the integrated features you saw in the RStudio output file.
 
 # Thank you for reading and using this code to further your scRNAseq analysis!
 # If you liked it, dont forget to acknowledge, fork and star!
