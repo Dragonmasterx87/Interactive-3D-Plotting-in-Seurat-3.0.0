@@ -10,7 +10,7 @@ Have a Great day!!
 
 # News:
 
-Stay in the loop for an upgraded version allowing for inter-operability with Seurat's UMAP function
+Stay in the loop for an upgraded version allowing for inter-operability with Seurat's UMAP function. Coming soon!
 
 # Contact
 Fahd Qadir, Graduate Student. Molecular Cell and Dev. Biology Graduate Program,
