@@ -8,6 +8,10 @@ Feel Free to message me if you run into issues and need help!
 Please Star and fork if this is useful for your analysis!
 Have a Great day!!
 
+# News:
+
+Stay in the loop for an upgraded version allowing for inter-operability with Seurat's UMAP function
+
 # Contact
 Fahd Qadir, Graduate Student. Molecular Cell and Dev. Biology Graduate Program,
 Dept. of Cell Biology, University of Miami, Miller School of Medicine.
