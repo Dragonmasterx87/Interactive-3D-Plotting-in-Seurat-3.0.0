@@ -1,6 +1,6 @@
 # Interacive multimodal 3D tSNE plotting of scRNA sequencing datasets
 # The following is a length of code generated to create nice 
-# 3D tSNE plots of seurat v3.0.0 objects utilizing the visualization 
+# 3D tSNE plots of seurat v3.0.0-v3.1.1 objects utilizing the visualization 
 # package plot_ly
 
 # R v3.5.3 (x64 bit) and RStudio v1.2.1335 (x64 bit) were used for running this code :)
