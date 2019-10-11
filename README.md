@@ -1,4 +1,4 @@
-# 3D-Plotting-in-Seurat-3.0.0
+# 3D-Plotting-in-Seurat
 
 The following code is used to generate nice interactive 3D tSNE and UMAP plots against Seurat objects created using the excellent single cell RNAseq analysis tool created by the Satijalab. V1 works for Seurat v2.3.4 + v3.0.2 and V2 (better interactive graphics, uses RShiny) of the code works for Seurat v3.0.0-v3.1.1
 
