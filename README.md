@@ -16,3 +16,5 @@ Fahd Qadir, Graduate Student. Molecular Cell and Dev. Biology Graduate Program,
 Dept. of Cell Biology, University of Miami, Miller School of Medicine.
 fahd.qadir@med.miami.edu
 fahdqadir@gmail.com
+
+[![DOI](https://zenodo.org/badge/186626439.svg)](https://zenodo.org/badge/latestdoi/186626439)
