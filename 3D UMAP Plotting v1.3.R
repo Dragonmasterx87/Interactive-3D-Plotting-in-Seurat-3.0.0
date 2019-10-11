@@ -11,7 +11,6 @@
 # Contributors (by their Github handles):
 # @Dragonmasterx87 (Dept. of Cell Biology, UM)
 # @msaadsadiq (Dept. of Electrical and Computer Engineering, UM)
-# @andrewwbutler (Center for Genomics and Systems Biology, NYU)  
 
 # Install plot_ly
 install.packages('plotly')
@@ -117,4 +116,5 @@ plot_ly(data = plotting.data,
 
 # Thank you for reading and using this code to further your scRNAseq analysis!
 # If you liked it, dont forget to acknowledge, fork and star!
+# Citation information is within the Readme, please dont forget to cite!
 # Have a wonderful day!!
