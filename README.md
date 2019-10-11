@@ -9,7 +9,10 @@ For more on Seurat please visit:https://satijalab.org/seurat/
 Code for analyzing UMAP embeddings and plotting in 3D are now added. Compatible with integrated/combined datasets created using new and improved sample integration systems in Seurat.
 
 # Cite
-Please dont forget to acknowledge the contributors! Please cite, fork and star if this was helpful for you! Please message me if you have any concerns, or create an issue in the issue tab and I would love to help you.
+Please dont forget to acknowledge the contributors! Please cite as:
+
+
+Fahd Qadir, Saad Sadiq, & Juan Domínguez-Bendala. (2019, October 11). 3D Plotting of scRNAseq data using Seurat objects (Version 1.3). Zenodo. http://doi.org/10.5281/zenodo.3483177
 
 # Contact
 Fahd Qadir, Graduate Student. Molecular Cell and Dev. Biology Graduate Program,
