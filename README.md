@@ -3,7 +3,7 @@
 The following code is used to generate nice interactive 3D tSNE and UMAP plots against Seurat objects created using the excellent single cell RNAseq analysis tool created by the Satijalab. V1 works for Seurat v2.3.4 + v3.0.2 and V2 (better interactive graphics, uses RShiny) of the code works for Seurat v3.0.0-v3.1.1
 
 The engine behind this code uses plotly:
-Plotly Technologies Inc. Title: Collaborative data science Publisher: Plotly Technologies Inc. Place of publication: Montréal, QC Date of publication: 2015 URL: https://plot.ly
+Plotly Technologies Inc. Collaborative data science. Montréal, QC, 2015. https://plot.ly.
 
 For more on Seurat please visit:https://satijalab.org/seurat/
 
