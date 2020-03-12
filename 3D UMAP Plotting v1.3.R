@@ -37,13 +37,13 @@ umap_3 <- yourseuratobject[["umap"]]@cell.embeddings[,3]
 Embeddings(object = yourseuratobject, reduction = "umap")
 
 # Prepare a dataframe for cell plotting
-plotting.data <- FetchData(object = yourseuratobject, vars = c("UMAP_1", "UMAP_2", "UMAP_3", "seurat_clusters"))
+plot.data <- FetchData(object = yourseuratobject, vars = c("UMAP_1", "UMAP_2", "UMAP_3", "seurat_clusters"))
 
 # Make a column of row name identities (these will be your cell/barcode names)
 plot.data$label <- paste(rownames(plot.data))
 
 # Plot your data, in this example my Seurat object had 21 clusters (0-20)
-plot_ly(data = plotting.data, 
+plot_ly(data = plot.data, 
         x = ~UMAP_1, y = ~UMAP_2, z = ~UMAP_3, 
         color = ~seurat_clusters, 
         colors = c("lightseagreen",
@@ -78,26 +78,26 @@ plot_ly(data = plotting.data,
 # Here we concentrate on SCT normalized data, or log normalized RNA NOT raw counts.
 # In addition if you want, you may look at normalised-RNA, SCT or integrated slots, to look at gene expression
 # Setting your DefaultAssay() will inform R which assay to pick up expression data from.
-DefaultAssay(object = pancreas.integrated)
-DefaultAssay(object = pancreas.integrated) <- "RNA"
-DefaultAssay(object = pancreas.integrated) <- "integrated"
-DefaultAssay(object = pancreas.integrated) <- "SCT"
+DefaultAssay(object = yourseuratobject)
+DefaultAssay(object = yourseuratobject) <- "RNA"
+DefaultAssay(object = yourseuratobject) <- "integrated"
+DefaultAssay(object = yourseuratobject) <- "SCT"
 
 # create a dataframe
-plotting.data <- FetchData(object = yourseuratobject, vars = c("UMAP_1", "UMAP_2", "UMAP_3", "ACTB"), slot = 'data')
+plot.data <- FetchData(object = yourseuratobject, vars = c("UMAP_1", "UMAP_2", "UMAP_3", "ACTB"), slot = 'data')
 
 # Say you want change the scale, so that every cell having an expression >1 will be one color
 # Basically, you are re-adjusting the scale here, so that any cell having a certain expression will light up on your 3D plot
 
 # First make another column in your dataframe, where all values above 1 are re-assigned a value of 1
 # This information is stored in the 'changed' column of your dataframe
-plotting.data$changed <- ifelse(test = plotting.data$ACTB <1, yes = plotting.data$ACTB, no = 1)
+plot.data$changed <- ifelse(test = plot.data$ACTB <1, yes = plot.data$ACTB, no = 1)
 
 # Add the label column, so that now the column has 'cellname-its expression value'
-plotting.data$label <- paste(rownames(plotting.data)," - ", plotting.data$ACTB, sep="")
+plot.data$label <- paste(rownames(plot.data)," - ", plot.data$ACTB, sep="")
 
 # Plot your data, in this example my Seurat object had 21 clusters (0-20), and cells express a gene called ACTB
-plot_ly(data = plotting.data, 
+plot_ly(data = plot.data, 
         x = ~UMAP_1, y = ~UMAP_2, z = ~UMAP_3, 
         color = ~changed, # you can just run this against the column for the gene as well using ~ACTB, the algorith will automatically scale in that case based on maximal and minimal values
         opacity = .5,
@@ -113,6 +113,40 @@ plot_ly(data = plotting.data,
 # HTML file. Once you have saved, just open the HTML file in any web browser (double click on the html- file
 # and if asked select to open with any web browser like google chrome/safari/mozilla/explorer etc).
 # It should be have all of the integrated features you saw in the RStudio output file.
+
+########## #
+########## #
+
+# Alternative method as designed by @vertesy (Thanks for the suggestions!)
+# create a dataframe
+goi <- "TOP2A"
+plotting.data <- FetchData(object = yourseuratobject, vars = c("UMAP_1", "UMAP_2", "UMAP_3", "Expression"=goi), slot = 'data')
+
+# Say you want change the scale, so that every cell having an expression >1 will be one color
+# Basically, you are re-adjusting the scale here, so that any cell having a certain expression will light up on your 3D plot
+
+# First make another column in your dataframe, where all values above 1 are re-assigned a value of 1
+# This information is stored in the 'Expression' column of your dataframe
+# Cutoff <- 2
+Cutoff <- quantile(plotting.data[,goi], probs = .95)
+plotting.data$"ExprCutoff" <- ifelse(test = plotting.data[,goi] <Cutoff, yes = plotting.data[,goi], no = Cutoff)
+
+# Add the label column, so that now the column has 'cellname-its expression value'
+plotting.data$label <- paste(rownames(plotting.data)," - ", plotting.data[,goi], sep="")
+
+# Plot your data, in this example my Seurat object had 21 clusters (0-20), and cells express a gene called ACTB
+plot_ly(data = plotting.data,
+        # name = goi,
+        x = ~UMAP_1, y = ~UMAP_2, z = ~UMAP_3, 
+        color = ~ExprCutoff, # you can just run this against the column for the gene as well using ~ACTB, the algorith will automatically scale in that case based on maximal and minimal values
+        opacity = .5,
+        colors = c('darkgrey', 'red'), 
+        type = "scatter3d", 
+        mode = "markers",
+        marker = list(size = 1), 
+        text=~label,
+        hoverinfo="text"
+) %>%layout(title=goi)
 
 # Thank you for reading and using this code to further your scRNAseq analysis!
 # If you liked it, dont forget to acknowledge, fork and star!
