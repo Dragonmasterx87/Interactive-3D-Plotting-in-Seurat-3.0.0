@@ -14,7 +14,7 @@ Code for analyzing UMAP embeddings and plotting in 3D are now added. Compatible 
 # Cite
 Please dont forget to acknowledge the contributors! Please cite as:
 
-Qadir, M.M.F., Alvarez-Cubela, S., Klein, D., Van Dijk, J., Anquela, R.M., Lanzoni, G., Sadiq, S., Moreno-Hernandez, Y.B., Navarro-Rubio, B., Garcia, M.T., Diaz, A., Johnson, K., Sant, D., Ricordi, C., Griswold, T., Pastori, R.L., Dominguez-bendala, J. (2020) Single cell resolution analysis of the human pancreatic ductal progenitor cell niche. (In press: Proceedings of the National Academy of Sciences)
+Qadir, M.M.F., Alvarez-Cubela, S., Klein, D., Van Dijk, J., Anquela, R.M., Lanzoni, G., Sadiq, S., Moreno-Hernandez, Y.B., Navarro-Rubio, B., Garcia, M.T., Diaz, A., Johnson, K., Sant, D., Ricordi, C., Griswold, T., Pastori, R.L., Dominguez-bendala, J. (2020) Single cell resolution analysis of the human pancreatic ductal progenitor cell niche. (In press: Proceedings of the National Academy of Sciences) https://doi.org/10.1073/pnas.1918314117
 
 Fahd Qadir, Saad Sadiq, & Juan Domínguez-Bendala. (2019, October 11). 3D Plotting of scRNAseq data using Seurat objects (Version 1.3). Zenodo. http://doi.org/10.5281/zenodo.3483177
 
