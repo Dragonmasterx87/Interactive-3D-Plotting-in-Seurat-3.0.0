@@ -43,7 +43,7 @@ plot.data <- FetchData(object = yourseuratobject, vars = c("UMAP_1", "UMAP_2", "
 plot.data$label <- paste(rownames(plot.data))
 
 # Plot your data, in this example my Seurat object had 21 clusters (0-20)
-plot_ly(data = plot.data, 
+fig <- plot_ly(data = plot.data, 
         x = ~UMAP_1, y = ~UMAP_2, z = ~UMAP_3, 
         color = ~seurat_clusters, 
         colors = c("lightseagreen",
@@ -72,6 +72,36 @@ plot_ly(data = plot.data,
         marker = list(size = 5, width=2), # controls size of points
         text=~label, #This is that extra column we made earlier for which we will use for cell ID
         hoverinfo="text") #When you visualize your plotly object, hovering your mouse pointer over a point shows cell names
+
+
+# Updates stemming from Issue #9 Having a fixed scale on axes while selecting particular clusters
+# @rtoddler thanks for the suggestions!
+# Before you plot, set the ranges of the axis you desire. This set axis range will be 
+# present across all clusters, and plotly will not adjust for axis length anymore
+# this axis length will persist even when selecting some clusters
+
+# xaxis
+axx <- list(
+  nticks = 4,
+  range = c(-10,10) #select range of xaxis
+)
+
+# yaxis
+axy <- list(
+  nticks = 4,
+  range = c(-10,10) #select range of yaxis
+)
+
+#zaxis
+axz <- list(
+  nticks = 4,
+  range = c(-10,10) #select range of zaxis
+)
+
+fig <- fig %>% layout(scene = list(xaxis=axx,yaxis=axy,zaxis=axz))
+fig_cube <- fig %>% layout(scene = list(xaxis=axx,yaxis=axy,zaxis=axz, aspectmode='cube')) # To maintain cubic aspect
+fig
+fig_cube
 
 # Say you wanto make a gene-expression 3D plot, where you can plot gene expression against a color scale
 # Here using the same seurat object as above, we extract gene expression information for beta-actin 'ACTB'
