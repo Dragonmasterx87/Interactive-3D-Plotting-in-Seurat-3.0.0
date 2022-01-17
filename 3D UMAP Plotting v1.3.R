@@ -28,10 +28,12 @@ yourseuratobject <- RunUMAP(yourseuratobject,
                             dims = 1:10,
                             n.components = 3L)
 
-# Extract tSNE information from Seurat Object
-umap_1 <- yourseuratobject[["umap"]]@cell.embeddings[,1]
-umap_2 <- yourseuratobject[["umap"]]@cell.embeddings[,2]
-umap_3 <- yourseuratobject[["umap"]]@cell.embeddings[,3]
+# This is a manual method of extracting embeddings and is not needed
+# as pointed out by user @sdinardo on 01142022 thank you! 
+# Extract UMAP information from Seurat Object
+# UMAP_1 <- yourseuratobject[["umap"]]@cell.embeddings[,1]
+# UMAP_2 <- yourseuratobject[["umap"]]@cell.embeddings[,2]
+# UMAP_3 <- yourseuratobject[["umap"]]@cell.embeddings[,3]
 
 # Visualize what headings are called so that you can extract them to form a dataframe
 Embeddings(object = yourseuratobject, reduction = "umap")
