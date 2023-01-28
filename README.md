@@ -7,21 +7,25 @@ Plotly Technologies Inc. Collaborative data science. Montréal, QC, 2015. https:
 
 For more on Seurat please visit:https://satijalab.org/seurat/
 
+<p align="center">
+  <img width="360" height="300" src="https://github.com/Dragonmasterx87/Gifs/blob/main/3d%20umap.gif">
+</p>
+
 # News:
 
 Code for analyzing UMAP embeddings and plotting in 3D are now added. Compatible with integrated/combined datasets created using new and improved sample integration systems in Seurat.
 
-# IF you use please dont forget to Cite, Thank you :) !!
+# IF you use please dont forget to Cite, Thank you :star_struck: !!
 
-<p align="center">
-  <img width="360" height="200" src="https://github.com/Dragonmasterx87/Gifs/blob/main/naruto_thanks.gif">
-</p>
-
-## Please dont forget to acknowledge the contributors! Please cite as:
+## Please cite as:
 
 Qadir, M. M. F., Álvarez-Cubela, S., Klein, D., van Dijk, J., Muñiz-Anquela, R., Moreno-Hernández, Y. B., ... & Díaz, Á. (2020). Single-cell resolution analysis of the human pancreatic ductal progenitor cell niche. Proceedings of the National Academy of Sciences, 117(20), 10876-10887.https://doi.org/10.1073/pnas.1918314117
 
 Fahd Qadir, Saad Sadiq, & Juan Domínguez-Bendala. (2019, October 11). 3D Plotting of scRNAseq data using Seurat objects (Version 1.3). Zenodo. http://doi.org/10.5281/zenodo.3483177
+
+<p align="center">
+  <img width="360" height="200" src="https://github.com/Dragonmasterx87/Gifs/blob/main/naruto_thanks.gif">
+</p>
 
 # Contact
 Fahd Qadir, Graduate Student. Molecular Cell and Dev. Biology Graduate Program,
