@@ -12,7 +12,12 @@ For more on Seurat please visit:https://satijalab.org/seurat/
 Code for analyzing UMAP embeddings and plotting in 3D are now added. Compatible with integrated/combined datasets created using new and improved sample integration systems in Seurat.
 
 # IF you use please dont forget to Cite, Thank you :) !!
-Please dont forget to acknowledge the contributors! Please cite as:
+
+<p align="center">
+  <img width="360" height="200" src="https://github.com/Dragonmasterx87/Gifs/blob/main/naruto_thanks.gif">
+</p>
+
+## Please dont forget to acknowledge the contributors! Please cite as:
 
 Qadir, M. M. F., Álvarez-Cubela, S., Klein, D., van Dijk, J., Muñiz-Anquela, R., Moreno-Hernández, Y. B., ... & Díaz, Á. (2020). Single-cell resolution analysis of the human pancreatic ductal progenitor cell niche. Proceedings of the National Academy of Sciences, 117(20), 10876-10887.https://doi.org/10.1073/pnas.1918314117
 
